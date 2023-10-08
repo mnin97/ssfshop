@@ -1,0 +1,315 @@
+.header {
+  height: 96px;
+  position: relative;
+  left: 0;
+  top: 0;
+  width: 100%;
+  min-height: 46px;
+  z-index: 100;
+  .inner {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    transition: 0.3s;
+    .scroll-down & {
+      transform: translateY(-46px);
+    }
+  }
+
+  .gruop-top {
+    display: flex;
+    align-items: center;
+    height: 46px;
+    padding: 0 10px;
+    .logo {
+      flex: none;
+      display: flex;
+      max-width: calc(100vw - 10px * 2 - 34px - 90px);
+      align-items: center;
+      margin-right: 20px;
+      img {
+        flex: none;
+        height: 18px;
+      }
+    }
+
+    .icon-box {
+      flex: none;
+      gap: 20px;
+      position: relative;
+      right: 0;
+      top: 0;
+      display: flex;
+      margin-left: auto;
+      white-space: nowrap;
+      .btn-search {
+        background: url(https://m.ssfshop.com/v3/images/svgs/search.svg) 50% 50% /
+          24px no-repeat scroll padding-box border-box rgba(0, 0, 0, 0);
+      }
+    }
+  }
+  .pop-search {
+    display: block;
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 51;
+    transform: translate3d(0, 0, 0);
+    transition: height 0.3s linear;
+    transition-delay: 0.2s;
+    height: 0%;
+    overflow: hidden;
+
+    &.on {
+      height: 100%;
+      .modal-dim {
+        .hotlist {
+          opacity: 1;
+          transition: 0.3s 0.6s;
+        }
+      }
+    }
+    .inner-gap {
+      display: flex;
+      align-items: center;
+      height: 46px;
+      backface-visibility: hidden;
+      padding: 0 15px;
+    }
+    .prev {
+      width: 24px;
+      height: 24px;
+      display: block;
+      margin-right: 5px;
+      background: url(https://m.ssfshop.com/v3/images/svgs/arrow-back.svg)
+        center/24px auto no-repeat;
+    }
+    .search {
+      margin-left: 10px;
+
+      right: 15px;
+      top: 5px;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      overflow: hidden;
+      -webkit-transition: all 0.3s;
+      transition: all 0.3s;
+      -webkit-transform-origin: center right;
+      transform-origin: center right;
+      height: 36px;
+      background: #f5f5f5;
+      border-radius: 6px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      width: calc(100vw - 45px - 40px);
+    }
+    .empty {
+      appearance: none;
+      border: none;
+      flex: 1;
+      font-size: 14px;
+      line-height: 36px;
+      height: 36px;
+      margin-left: 12px;
+      background: #f5f5f5;
+      outline: none;
+      resize: none;
+      color: #111;
+      &::placeholder {
+        font-weight: 500;
+        color: #111;
+      }
+    }
+    .modal-dim {
+      top: 46px;
+      bottom: auto;
+      height: 892px;
+      padding: 0px 18px 0px 18px;
+      .hotlist {
+        position: relative;
+        margin-top: 30px;
+        padding-right: 0;
+        margin-bottom: 60px;
+        opacity: 0;
+        transition: 0.3s;
+      }
+      #hot-keyword {
+        display: block;
+        height: 50px;
+        line-height: 50px;
+        font-size: 15px;
+        font-weight: 700;
+        span {
+          display: inline-block;
+          vertical-align: middle;
+          font-size: 12px;
+          line-height: 16px;
+          margin-left: 6px;
+          font-weight: 500;
+          color: #b0b0b0;
+        }
+      }
+      .util-more {
+        top: 13px;
+        position: absolute;
+        right: 15px;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        color: #969696;
+        display: inline-block;
+        height: 26px;
+        font-size: 12px;
+        line-height: 26px;
+        padding: 0;
+        &::after {
+          display: inline-block;
+          background: url(https://m.ssfshop.com/v3/images/svgs/chevron-right-12-gray500.svg);
+          content: "";
+          width: 12px;
+          height: 22px;
+          margin-left: 1px;
+          vertical-align: top;
+          margin-top: 1px;
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: 12px;
+        }
+      }
+      .rank {
+        display: flex;
+        flex-flow: wrap column;
+        align-items: flex-start;
+        height: 180px;
+        li {
+          display: flex;
+          align-items: center;
+          padding: 8px 0;
+          font-size: 14px;
+          line-height: 20px;
+          flex: none;
+          width: calc((100vw - 15px * 3 - 20px) / 2);
+          padding-right: 10px;
+        }
+        em {
+          width: 16px;
+          margin-right: 2px;
+        }
+        a {
+          flex: 1;
+          white-space: nowrap;
+          text-overflow: ellipsis;
+          overflow: hidden;
+        }
+        .up {
+          width: 22px;
+          justify-content: center;
+          white-space: nowrap;
+          margin-left: 4px;
+          color: #f44338;
+
+          &::before {
+            display: inline-block;
+            background-image: url(https://m.ssfshop.com/v3/images/svgs/rank-up-8.svg);
+            width: 11px;
+            height: 6px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 8px;
+            content: "";
+          }
+        }
+
+        .down {
+          width: 22px;
+          justify-content: center;
+          white-space: nowrap;
+          margin-left: 4px;
+          color: #f44338;
+          &::before {
+            display: inline-block;
+            background-image: url(https://m.ssfshop.com/v3/images/svgs/rank-down-8.svg);
+            width: 11px;
+            height: 6px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 8px;
+            content: "";
+          }
+        }
+        .line {
+          width: 22px;
+          justify-content: center;
+          white-space: nowrap;
+          margin-left: 4px;
+          color: #111;
+          display: inline-block;
+          align-items: center;
+          font-size: 10px;
+          line-height: 20px;
+          svg {
+            width: 11px;
+            height: 6px;
+            background-repeat: no-repeat;
+            background-position: center;
+            background-size: 8px;
+            content: "";
+          }
+        }
+      }
+    }
+  }
+  .gruop-bottom {
+    width: 100%;
+    overflow: hidden;
+    overflow-x: auto;
+    height: 50px;
+    .header-nav {
+      display: flex;
+      justify-content: space-between;
+      padding-left: 12px;
+    }
+    .nav-item {
+      padding: 16px 0 3px 4px;
+      &:last-child {
+        padding-right: 18px;
+      }
+      a {
+        position: relative;
+        font-size: 15px;
+        padding: 5px 0;
+        line-height: 21px;
+        color: #111;
+        white-space: nowrap;
+      }
+      .titleBold {
+        font-weight: 700;
+        position: relative;
+        font-size: 15px;
+        padding: 5px 0;
+        line-height: 21px;
+        color: #111;
+        white-space: nowrap;
+      }
+      .titlePoint {
+        &::after {
+          display: inline-block;
+          content: "";
+          position: absolute;
+          right: -4px;
+          top: 3px;
+          width: 4px;
+          height: 4px;
+          border-radius: 4px;
+          background: #7e00ff;
+        }
+      }
+    }
+  }
+}

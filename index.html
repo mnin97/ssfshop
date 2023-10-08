@@ -1,0 +1,1847 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./assets/css/style.css" />
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+
+    <script src="./assets/js/main.js" defer></script>
+  </head>
+  <body>
+    <header class="header">
+      <div class="inner">
+        <div class="gruop-top">
+          <a class="logo">
+            <img
+              src="https://m.ssfshop.com/v3/images/layout/SSF-logo-x3.png?timestamp=20221027"
+              alt=""
+            />
+            <span class="blind">SSF SHOP 타이틀</span>
+          </a>
+          <div class="icon-box">
+            <button class="btn-search">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M15.2195 16.0629C13.8185 17.2701 11.9945 18 10 18C5.58172 18 2 14.4183 2 10C2 5.58172 5.58172 2 10 2C14.4183 2 18 5.58172 18 10C18 11.9918 17.2721 13.8135 16.0678 15.2138L21.0455 20.007C21.2842 20.2368 21.2914 20.6167 21.0615 20.8554C20.8317 21.0941 20.4518 21.1012 20.2132 20.8714L15.2195 16.0629ZM16.8 10C16.8 13.7555 13.7555 16.8 10 16.8C6.24446 16.8 3.2 13.7555 3.2 10C3.2 6.24446 6.24446 3.2 10 3.2C13.7555 3.2 16.8 6.24446 16.8 10Z"
+                  fill="#111111"
+                />
+              </svg>
+            </button>
+            <a class="btn-cart">
+              <svg
+                width="24"
+                height="24"
+                viewBox="0 0 24 24"
+                fill="none"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  clip-rule="evenodd"
+                  d="M7.16886 5.01176C7.41287 3.22879 8.93602 1.8999 10.7356 1.8999H13.2626C15.0622 1.8999 16.5853 3.22879 16.8294 5.01176L17.1014 6.99992H19.8312L20.9959 19.9101C21.0487 20.4954 20.5877 20.9999 20 20.9999H4.00008C3.41232 20.9999 2.95131 20.4954 3.00413 19.9101L4.16894 6.99992H6.89676L7.16886 5.01176ZM8.10795 6.99992H15.8903L15.6404 5.17448C15.4778 3.98583 14.4623 3.0999 13.2626 3.0999H10.7356C9.53588 3.0999 8.52045 3.98583 8.35778 5.17447L8.10795 6.99992ZM4.21894 19.7999L5.26555 8.19992H18.7346L19.7811 19.7999H4.21894Z"
+                  fill="#111111"
+                />
+              </svg>
+            </a>
+          </div>
+        </div>
+        <div class="gruop-bottom">
+          <ul class="header-nav">
+            <li class="nav-item">
+              <a href="">
+                <span class="titleBold">홈</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="">
+                <span class="title">핫딜</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="">
+                <span class="title">랭킹</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="">
+                <span class="titlePoint">세사패 TV</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="">
+                <span class="titlePoint">매거진</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="">
+                <span class="title">선물하기</span>
+              </a>
+            </li>
+            <li class="nav-item">
+              <a href="">
+                <span class="title">이벤트</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <aside class="pop-search">
+        <div class="inner-gap">
+          <button class="prev"></button>
+          <div class="search">
+            <input
+              type="text"
+              class="empty"
+              placeholder="검색어를 입력해 주세요"
+            />
+          </div>
+        </div>
+        <div class="modal-dim">
+          <div class="hotlist">
+            <strong id="hot-keyword">
+              인기 검색어
+              <span>18:00 업데이트</span>
+            </strong>
+            <a href="" class="util-more"> 더보기 </a>
+            <ul class="rank">
+              <li>
+                <em>1</em>
+                <a href="">에잇세컨즈</a>
+                <span class="line">
+                  <svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <em>2</em>
+                <a href="">메종키츠네</a>
+                <span class="line"
+                  ><svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <em>3</em>
+                <a href="">가디건</a>
+                <span class="up"> </span>
+              </li>
+              <li>
+                <em>4</em>
+                <a href="">빈폴레이디스</a>
+                <span class="down"> </span>
+              </li>
+              <li>
+                <em>5</em>
+                <a href="">준지</a>
+                <span class="line"
+                  ><svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <em>6</em>
+                <a href="">맨투맨</a>
+                <span class="line"
+                  ><svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <em>7</em>
+                <a href="">르메르</a>
+                <span class="line"
+                  ><svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <em>8</em>
+                <a href="">플리츠플리즈</a>
+                <span class="line"
+                  ><svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <em>9</em>
+                <a href="">바오바오</a>
+                <span class="line"
+                  ><svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+              <li>
+                <em>10</em>
+                <a href="">빈폴키즈</a>
+                <span class="line"
+                  ><svg
+                    width="8"
+                    height="8"
+                    viewBox="0 0 8 8"
+                    fill="none"
+                    xmlns="http://www.w3.org/2000/svg"
+                  >
+                    <rect x="1" y="3.5" width="6" height="1" fill="#424242" />
+                  </svg>
+                </span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </aside>
+
+      <nav class="fnb on">
+        <a href=""><span class="blind">????</span></a>
+        <a href=""><span class="blind">????</span></a>
+        <a href=""><span class="blind">????</span></a>
+        <a href=""><span class="blind">????</span></a>
+        <a href=""><span class="blind">????</span></a>
+      </nav>
+    </header>
+    <main>
+      <section class="sc-visual">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22378_291563_5_KOR_20230922164939.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="brand-title">ROGATIS</span>
+                  <span class="title">
+                    가볍게 걸치기 좋은
+                    <br />
+                    요즘 계절
+                  </span>
+                  <span class="desc">
+                    인플루언서의
+                    <br />
+                    가을 아우터 스타일링
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22378_250787_25_KOR_20230922111055.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="brand-title">10 CORSO COMO</span>
+                  <span class="title"> ADER ERROR </span>
+                  <span class="desc">
+                    예상치 못한 여정,
+                    <br />
+                    23 F/W 컬렉션
+                  </span>
+                </div>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22378_311489_13_KOR_20230922151338.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="brand-title">TORY BURCH</span>
+                  <span class="title">
+                    한가위 선물같은
+                    <br />
+                    스페셜 위크
+                  </span>
+                  <span class="desc"> 더블적립 + 5% 쿠폰까지! </span>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div class="control-area">
+            <div class="swiper-pagination"></div>
+            <button class="link-more"></button>
+          </div>
+        </div>
+      </section>
+
+      <section class="sc-categoty">
+        <ul class="list">
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_1_KOR_20230713171245.png"
+                alt=""
+              />
+              <span class="desc">여성</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_2_KOR_20230905185152.jpg"
+                alt=""
+              />
+              <span class="desc">남성</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_3_KOR_20230427133225.png"
+                alt=""
+              />
+              <span class="desc">럭셔리</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_4_KOR_20230427133244.png"
+                alt=""
+              />
+              <span class="desc">백 & 슈즈</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_5_KOR_20230427133304.png"
+                alt=""
+              />
+              <span class="desc">키즈</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_6_KOR_20230427133354.png"
+                alt=""
+              />
+              <span class="desc">뷰티</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_7_KOR_20230427133415.png"
+                alt=""
+              />
+              <span class="desc">라이프</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_8_KOR_20230427133434.png"
+                alt=""
+              />
+              <span class="desc">골프</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_9_KOR_20230427133445.png"
+                alt=""
+              />
+              <span class="desc">스포츠</span>
+            </a>
+          </li>
+          <li class="list-item">
+            <a href="">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22440_254924_10_KOR_20230427133454.png"
+                alt=""
+              />
+              <span class="desc">아울렛</span>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sc-visual2">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <span class="blind">이벤트 영역으로 이동</span>
+            <a class="swiper-slide">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22384_246786_11_KOR_OV_20230703080226.png"
+                alt=""
+              />
+              <em>친구 1명만 초대해도 5천 코인을 드려요</em>
+            </a>
+            <a class="swiper-slide">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22384_246786_12_KOR_OV_20230926103650.png"
+                alt=""
+              />
+              <em>추석 연휴 배송 & 픽업 안내</em>
+            </a>
+            <a class="swiper-slide">
+              <img
+                src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22384_246786_10_KOR_OV_20230622111755.png"
+                alt=""
+              />
+              <em>멤버십 전용 혜택 기프트 포인트</em>
+            </a>
+          </div>
+          <div class="control-area">
+            <button class="autoplay" data-slide="0"></button>
+            <div class="swiper-pagination"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="sc-newestProduct">
+        <span class="blind">신상영역입니다.</span>
+        <h2 class="headline">페이퍼보이 23 F/W 발매</h2>
+        <a href="">
+          <div class="img-box">
+            <img
+              src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22399_242905_79_KOR_20230829150212.jpg"
+              alt=""
+            />
+          </div>
+          <div class="content">
+            <h3 class="title">이지웨어에 감각을 입히다</h3>
+            <p class="desc">단독! 스웨트 셋업 포합 최대 51% 혜택</p>
+          </div>
+        </a>
+      </section>
+
+      <!-- 여기 공통으로 쓸 부분임 -->
+      <section class="sc-product">
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22739_278036_61_KOR_20230922172248.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    뉴 클래식,게임백 포함 <br />
+                    가방 한정 10% 쿠폰 혜택
+                  </span>
+                  <span class="desc">LEMAIRE</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/08/25/GM0023082518661_0_THNAIL_ORGINL_20230828123207233.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> LEMAIRE </span>
+                      <span class="title">
+                        (UNISEX) Small Soft Game Bag - Dark Chocolate
+                      </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/06/20/GM0023062061809_0_THNAIL_ORGINL_20230707104255940.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> LEMAIRE </span>
+                      <span class="title">
+                        (UNISEX) Small Croissant Bag - Dark Chocolate
+                      </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">1,780,000</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22739_302316_1_KOR_20230922192959.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    23 F/W '고요한 우아함' <br />
+                    신상 발매 기념 단독 15%
+                  </span>
+                  <span class="desc">WHEN WE WILL</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/08/31/GQ8423083152911_0_ORGINL_20230831165954551.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> WHEN WE WILL </span>
+                      <span class="title">
+                        페트리코 플리츠 스커트 (3컬러)
+                      </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price"> 118,750</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/09/07/GQ8423090784450_0_ORGINL_20230907152430840.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> WHEN WE WILL </span>
+                      <span class="title"> 레이나 플리츠 원피스 (2컬러) </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22739_306963_1_KOR_20230927181431.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    우리들만의 아지트 <br />
+                    9월 마지막 DROP ~10%
+                  </span>
+                  <span class="desc">MATIN KIM</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/07/11/GM0023071165264_0_THNAIL_ORGINL_20230925091725840.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> Matin Kim </span>
+                      <span class="title">
+                        WAVY STRIPE BRUSHED CARDIGAN IN YELLOW
+                      </span>
+                      <span class="desc">
+                        <span class="price">121,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/09/04/GM0023090466896_0_THNAIL_ORGINL_20230925091728498.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> Matin Kim </span>
+                      <span class="title">
+                        MATIN CROP HOODY COATING JUMPER IN NAVY
+                      </span>
+                      <span class="desc">
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-pagination fraction"></div>
+        </div>
+      </section>
+
+      <section class="sc-brand-gather">
+        <div class="swiper">
+          <ul class="swiper-wrapper" id="brandList">
+            <!---->
+          </ul>
+          <div class="swiper-pagination fraction"></div>
+        </div>
+      </section>
+
+      <section class="sc-eventarea">
+        <span class="blind">이벤트 영역입니다.</span>
+        <h2 class="headline">이벤트</h2>
+        <div class="swiper visual">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="">
+                <div class="img-box">
+                  <img
+                    src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22410_246870_44_KOR_20230825165721.jpg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <div class="img-box">
+                  <img
+                    src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22410_246870_92_KOR_20230914103122.jpg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <div class="img-box">
+                  <img
+                    src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22410_246870_72_KOR_20230628222405.jpg"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </li>
+          </ul>
+          <div class="control-area">
+            <button class="autoplay" data-slide="1"></button>
+            <div class="swiper-pagination">
+              <button class="link-more"></button>
+            </div>
+          </div>
+        </div>
+
+        <div class="swiper content">
+          <ul class="swiper-wrapper">
+            <li class="swiper-slide">
+              <a href="">
+                <div class="content-box">
+                  <span class="title">9월의 신규 고객 혜택</span>
+                  <span class="desc">최대 35만 쿠폰 + 5천 캐시백</span>
+                </div>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <div class="content-box">
+                  <span class="title">신상 쇼핑했다면 신청하세요</span>
+                  <span class="desc">최대 20만 코인 페이백의 기회</span>
+                </div>
+              </a>
+            </li>
+            <li class="swiper-slide">
+              <a href="">
+                <div class="content-box">
+                  <span class="title">토스페이 생애 첫 결제 캐시백 이벤트</span>
+                  <span class="desc">1만원 이상 결제 시 2천원 캐시백</span>
+                </div>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="sc-product2">
+        <span class="blind">계절 신상 모음</span>
+        <h2 class="headline">새로운 계절,기다리던 신상</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22405_268385_156_KOR_20230926193529.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    무르익는 가을 신상 <br />
+                    MID SALE OPEN
+                  </span>
+                  <span class="desc">GALAXY LIFESTYLE</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/HMBR/23/08/07/GM0023080739200_0_THNAIL_ORGINL_20230830143907994.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> GALAXY LIFESTYLE </span>
+                      <span class="title">
+                        [三無衣服] 워셔블 폴로넥 카디건 - 베이지
+                      </span>
+                      <span class="desc">
+                        <em class="dc">28%</em>
+                        <span class="price">221,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/HMBR/23/08/07/GM0023080739197_0_THNAIL_ORGINL_20230901153040458.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> GALAXY LIFESTYLE </span>
+                      <span class="title">
+                        [三無衣服] 워셔블 라운드넥 카디건 - 블랙
+                      </span>
+                      <span class="desc">
+                        <em class="dc">28%</em>
+                        <span class="price">221,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22405_271841_66_KOR_20230926151947.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    가을 여행의 시작 <br />
+                    F/W 의류 최대 72%
+                  </span>
+                  <span class="desc">NATIONAL GEOGRAPHIC KIDS</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/08/25/GM0023082519123_0_THNAIL_ORGINL_20230831111001301.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> NATIONAL GEOGRAPHIC KIDS </span>
+                      <span class="title">
+                        내셔널지오그래픽 키즈 K234UDW980 포켓 배색 스트레치 덕
+                        다운 점퍼 CARBONBLACK
+                      </span>
+                      <span class="desc">
+                        <em class="dc">13%</em>
+                        <span class="price">241,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/08/17/GM0023081777812_0_THNAIL_ORGINL_20230817171643682.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> NATIONAL GEOGRAPHIC KIDS </span>
+                      <span class="title">
+                        내셔널지오그래픽 키즈 K233UFT910 판테라 우븐 트레이닝
+                        후드 자켓 JADE
+                      </span>
+                      <span class="desc">
+                        <em class="dc">13%</em>
+                        <span class="price">129,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22405_292431_42_KOR_20230922171827.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    띠어리 크루들의 가을, <br />
+                    데이트룩&하객룩 모아보기
+                  </span>
+                  <span class="desc">THEORY</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/08/07/GM0023080739052_0_THNAIL_ORGINL_20230828210450921.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> Theory </span>
+                      <span class="title">
+                        Women Double Wool-Cashmere Mini Skirt - Black
+                      </span>
+                      <span class="desc">
+                        <em class="dc">5%</em>
+                        <span class="price">511,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ECBR/23/07/20/GM0023072037893_0_THNAIL_ORGINL_20230828200823173.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> Theory</span>
+                      <span class="title">
+                        Women Clean Cottoncash Button-down Cardigan - Palomino
+                      </span>
+                      <span class="desc">
+                        <em class="dc">5%</em>
+                        <span class="price">521,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-pagination fraction"></div>
+        </div>
+      </section>
+
+      <section class="sc-rank">
+        <span class="blind">랭킹영역입니다</span>
+        <h2 class="headline">랭킹</h2>
+        <div class="category">
+          <ul class="cate-list">
+            <li>
+              <a href="#" class="cate on" data-category="women">여성</a>
+            </li>
+            <li>
+              <a href="" class="cate" data-category="men">남성</a>
+            </li>
+            <li>
+              <a href="" class="cate">키즈</a>
+            </li>
+            <li>
+              <a href="" class="cate">럭셔리</a>
+            </li>
+            <li>
+              <a href="" class="cate">백&슈즈</a>
+            </li>
+            <li>
+              <a href="" class="cate">스포츠</a>
+            </li>
+            <li>
+              <a href="" class="cate">골프</a>
+            </li>
+            <li>
+              <a href="" class="cate">뷰티</a>
+            </li>
+            <li>
+              <a href="" class="cate">라이프</a>
+            </li>
+            <li>
+              <a href="" class="cate">아울렛</a>
+            </li>
+          </ul>
+        </div>
+
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide" id="cateList1">
+              <ul class="rank-list"></ul>
+            </div>
+            <div class="swiper-slide" id="cateList2">
+              <ul class="rank-list"></ul>
+            </div>
+            <div class="swiper-slide" id="cateList3">
+              <ul class="rank-list"></ul>
+            </div>
+            <div class="swiper-slide" id="cateList4">
+              <ul class="rank-list"></ul>
+            </div>
+          </div>
+          <div class="rank-more"><a href="">랭킹 바로가기</a></div>
+        </div>
+      </section>
+
+      <section class="sc-product2">
+        <span class="blind">72시간 특가</span>
+        <h2 class="headline">72시간 특가</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22578_305921_1_KOR_20230921155245.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    황금 연휴 BEST 특가 ~91% <br />
+                    급찐급빠 바디석션 + 크림
+                  </span>
+                  <span class="desc">BEAUTY</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/BETY/23/09/07/GQNA23090784777_0_THNAIL_ORGINL_20230907161649645.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> FACE FACTORY </span>
+                      <span class="title">
+                        [페이스팩토리] 흡입 바디관리 에스샷 바디석션 마사지기
+                        (+마사지크림 특별증정)
+                      </span>
+                      <span class="desc">
+                        <em class="dc">52%</em>
+                        <span class="price"> 119,970</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/BETY/23/07/12/GQF823071274120_0_ORGINL_20230712163449473.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> JUNGSAEMMOOL </span>
+                      <span class="title">
+                        [스킨누더파데 샤쉐 2매 증정] 정샘물 스킨 누더 파운데이션
+                        30ml
+                      </span>
+                      <span class="desc">
+                        <em class="dc">26%</em>
+                        <span class="price"> 38,680</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22578_262542_12_KOR_20230927163056.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    정적과 여백의 미 <br />
+                    SSF 단독+신상 ~37%
+                  </span>
+                  <span class="desc">J Rium</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/08/16/GPG723081673856_0_THNAIL_ORGINL_20230914180333352.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> J Rium </span>
+                      <span class="title">
+                        캐시미어 에센셜 라운드넥 그레이
+                      </span>
+                      <span class="desc">
+                        <em class="dc">25%</em>
+                        <span class="price">133,140</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/08/23/GPG723082301630_0_THNAIL_ORGINL_20230915092353553.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> J Rium</span>
+                      <span class="title">
+                        [우먼] 캐시미어 에센셜 라운드넥 가디건 아이보리
+                      </span>
+                      <span class="desc">
+                        <em class="dc">21%</em>
+                        <span class="price"> 148,890</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22578_262661_1_KOR_20230927143225.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title">
+                    가을의 멋 레더 <br />
+                    지금이 준비할 타이밍 ~55%
+                  </span>
+                  <span class="desc">ALLSAINTS</span>
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/03/14/GQ3Y23031489329_0_ORGINL_20230323154557259.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> ALLSAINTS</span>
+                      <span class="title">
+                        올세인츠 바네사 카디건 WK034V-5698
+                      </span>
+                      <span class="desc">
+                        <em class="dc">46%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/05/31/GQ3Y23053159716_0_THNAIL_ORGINL_20230602170330201.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> ALLSAINTS </span>
+                      <span class="title">
+                        올세인츠 애덤 자켓 ML064Y-8457
+                      </span>
+                      <span class="desc">
+                        <em class="dc">46%</em>
+                        <span class="price">251,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-pagination fraction"></div>
+        </div>
+      </section>
+
+      <section class="sc-product2">
+        <span class="blind">신상품</span>
+        <h2 class="headline">새로운 브랜드를 소개할게요</h2>
+        <div class="swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22497_270012_1_KOR_20230925111819.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title"> ILLIGO </span>
+                  <span class="desc"
+                    >아트워크와 패션의 만남 <br />
+                    실버백 포함 단독 ~48%</span
+                  >
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/KIDS/23/09/01/GQX023090162423_0_THNAIL_ORGINL_20230901135406116.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> ILLIGO </span>
+                      <span class="title"> 에센셜 포켓 백 블랙 </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">187,920</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/KIDS/23/08/31/GQX023083152777_0_THNAIL_ORGINL_20230831163501753.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> ILLIGO </span>
+                      <span class="title"> 시그니처 백 실버 </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22497_270026_47_KOR_20230922174638.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title"> WRANGLER </span>
+                  <span class="desc"
+                    >입을수록 요염한<br />데님과 스웨트 ~33%</span
+                  >
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/09/05/GP5323090574870_0_ORGINL_20230905211003760.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> WRANGLER </span>
+                      <span class="title">
+                        우먼즈 스탠다드 하프집업 스웻셔츠 아이보리
+                      </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/09/05/GP5323090574878_0_ORGINL_20230905211038959.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> WRANGLER </span>
+                      <span class="title"> 우먼즈 와이드 데님팬츠 그레이 </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="swiper-slide">
+              <a href="">
+                <img
+                  src="	https://img.ssfshop.com/display/category/THM/A30/A16/contents/22497_270529_1_KOR_20230925142735.jpg"
+                  alt=""
+                />
+                <div class="content-box">
+                  <span class="title"> STUDIO SALT </span>
+                  <span class="desc"
+                    >군더더기 없는 클래식 룩 <br />론칭 기념 15%</span
+                  >
+                </div>
+              </a>
+              <ul class="bestList">
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/09/19/GQXC23091953214_0_THNAIL_ORGINL_20230919162854116.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> Studio Salt </span>
+                      <span class="title">
+                        [23 FALL][SALT Label] CLASSIC LEATHER BLOUSON_BLACK
+                      </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="img-box">
+                      <img
+                        src="https://img.ssfshop.com/cmd/RB_280x370/src/https://img.ssfshop.com/goods/ORBR/23/09/19/GQXC23091952983_0_THNAIL_ORGINL_20230919155149007.jpg"
+                        alt=""
+                      />
+                    </div>
+                    <div class="caption">
+                      <span class="brandname"> Studio Salt </span>
+                      <span class="title">
+                        [23 FALL][SALT Label] MONET LACE BLOUSE_ WHITE
+                      </span>
+                      <span class="desc">
+                        <em class="dc">64%</em>
+                        <span class="price">21,240</span>
+                      </span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="swiper-pagination fraction"></div>
+        </div>
+      </section>
+
+      <section class="sc-brandnews">
+        <span class="blind">브랜드 소식 영역입니다</span>
+        <ul class="list">
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_579_KOR_20230927145022.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc">23 F/W 1st Drop <br />빈티지 스쿨 클럽</span>
+                <span class="title">THE APERTURE</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_634_KOR_20230927091417.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc"
+                  >가을이 오면 <br />
+                  이 코트를 꺼내세요</span
+                >
+                <span class="title">LEBEIGE</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_261_KOR_20230926164233.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc">차분하고 고요한 시간</span>
+                <span class="title">FACADE PATTERN</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_21_KOR_20230927171500.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc"
+                  >아늑함을 입을 시간 <br />
+                  따뜻한 가을 햇살 담긴 니트</span
+                >
+                <span class="title">8 seconds</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_614_KOR_20230925093503.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc"
+                  >사랑스러운 무드 <br />최대 50% + 신상 오픈</span
+                >
+                <span class="title">PIVVEE</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_620_KOR_20230922141314.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc">추석선물 잡화 <br />최대 84% 할인</span>
+                <span class="title">LUXURY</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_621_KOR_20230922151952.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc"
+                  >국가비 X 뱀포드 <br />15% 할인 + 샤셰 증정</span
+                >
+                <span class="title">LABEL C</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22403_243361_345_KOR_20230922135344.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="desc"
+                  >나만의 컬러 침구와 <br />함께하는 새 계절 ~75%</span
+                >
+                <span class="title">MIX&MATCH</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+
+      <section class="sc-choice">
+        <span class="blind">선택된 아이템 영역입니다.</span>
+        <h2 class="headline">힙한 diver가 선택한 아이템</h2>
+        <ul class="tag-box">
+          <li><a href="" class="tag on" data-influ="8seconds">#8seconds</a></li>
+          <li><a href="" class="tag" data-influ="BEANPOLE">#BEANPOLE</a></li>
+          <li><a href="" class="tag" data-influ="다이버픽">#다이버픽</a></li>
+          <li><a href="" class="tag" data-influ="가을신상">#가을신상</a></li>
+          <li><a href="" class="tag" data-influ="간절기템">#간절기템</a></li>
+        </ul>
+        <div class="influ-wrapper" id="influList1">
+          <ul class="influ-list"></ul>
+        </div>
+        <a href="" class="link-more">
+          <svg
+            width="20"
+            height="20"
+            class="icon"
+            viewBox="0 0 20 20"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <circle cx="10" cy="10" r="10" fill="#103BD0" />
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M10.3846 6H14V12.8767H10.3846V12.189C9.81641 12.6883 9.00991 13 8.11538 13C6.39487 13 5 11.8467 5 10.4243C5 9.00188 6.39487 7.84861 8.11538 7.84861C9.00991 7.84861 9.81641 8.16036 10.3846 8.6596V6ZM8.16667 10.4243C8.16667 11.0651 8.66026 11.5828 9.26923 11.5828C9.8782 11.5828 10.3718 11.0651 10.3718 10.4243C10.3718 9.78346 9.8782 9.26586 9.26923 9.26586C8.66026 9.26586 8.16667 9.78346 8.16667 10.4243Z"
+              fill="white"
+            />
+          </svg>
+          다이버 바로가기
+          <svg
+            class="arrow"
+            width="12"
+            height="12"
+            viewBox="0 0 24 24"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M7.16819 20.8352C6.94394 20.6156 6.94394 20.2594 7.16819 20.0398L15.3758 12L7.16819 3.96025C6.94394 3.74058 6.94394 3.38442 7.16819 3.16475C7.39245 2.94508 7.75604 2.94508 7.9803 3.16475L17 12L7.9803 20.8352C7.75604 21.0549 7.39245 21.0549 7.16819 20.8352Z"
+              fill="#111111"
+            />
+          </svg>
+        </a>
+      </section>
+
+      <section class="sc-magazine">
+        <span class="blind">매거진영역입니다</span>
+        <h2 class="headline">매거진</h2>
+
+        <ul class="list">
+          <li class="banner">
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22402_254466_24_KOR_20230829163913.jpg"
+                  alt=""
+                />
+                <span class="title">한 여름날의 데이트</span>
+              </div>
+              <div class="content">
+                <span class="desc">Sunny Season</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22402_254466_25_KOR_20230822165039.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="title">Code Name : 사람</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22402_254466_9_KOR_20230818112609.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="title">Code Name : 사람</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22402_254466_15_KOR_20230818103727.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="title">Code Name : 사람</span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <img
+                  src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22402_254466_26_KOR_20230816110532.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="content">
+                <span class="title">Code Name : 사람</span>
+              </div>
+            </a>
+          </li>
+        </ul>
+        <a href="" class="link-more"
+          >매거진 바로가기
+          <svg
+            width="12"
+            height="13"
+            viewBox="0 0 12 13"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              fill-rule="evenodd"
+              clip-rule="evenodd"
+              d="M3.54293 2.39645C3.73819 2.20118 4.05478 2.20118 4.25004 2.39645L8.60359 6.75L4.25004 11.1036C4.05478 11.2988 3.73819 11.2988 3.54293 11.1036C3.34767 10.9083 3.34767 10.5917 3.54293 10.3964L7.18938 6.75L3.54293 3.10355C3.34767 2.90829 3.34767 2.59171 3.54293 2.39645Z"
+              fill="#111111"
+            />
+          </svg>
+        </a>
+      </section>
+
+      <section class="sc-video">
+        <span class="blind">세사패 TV 영역입니다.</span>
+        <h2 class="headline">세사패 TV</h2>
+        <ul class="list">
+          <li class="video-box">
+            <a href="">
+              <div class="img-box">
+                <div class="video">
+                  <a href="" class="play"></a>
+                  <div class="poster">
+                    <img
+                      src="	https://img.youtube.com/vi/amhubDb5-Ew/sddefault.jpg"
+                      alt=""
+                    />
+                  </div>
+                  <iframe
+                    class="youtube"
+                    data-videoid="amhubDb5-Ew"
+                    data-vratio="1"
+                    data-mute="1"
+                    id="amhubDb5-Ew"
+                    frameborder="0"
+                    allowfullscreen="1"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    title="Mㅓ든지 Dㅏ하는 게 MD라구요?  | 브랜드 수주회로 시작해, 디제잉으로 마무리🎧하는 바잉MD의 반전! 일상로그 | 세사로그 ep.27"
+                    width="100%"
+                    height="100%"
+                    src="https://www.youtube.com/embed/amhubDb5-Ew?rel=0&amp;controls=0"
+                    style="opacity: 1"
+                  ></iframe>
+                  <button class="close"></button>
+                </div>
+              </div>
+              <div class="content">
+                <span class="desc">
+                  vlog Mㅓ든지 Dㅏ하는 게 MD라구요? | 브랜드 수주회로 시작해,
+                  디제잉으로 마무리🎧하는 바잉MD의 반전! 일상로그
+                </span>
+
+                <div class="hash">
+                  <span>#브이로그</span>
+                  <span>#바잉MD</span>
+                  <span>#수주회</span>
+                  <span>#디제잉</span>
+                </div>
+              </div>
+            </a>
+          </li>
+
+          <ul class="video-link">
+            <li>
+              <a href="">
+                <div class="img-box">
+                  <img
+                    src="https://img.youtube.com/vi/amhubDb5-Ew/sddefault.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="content">
+                  <span class="desc"
+                    >vlog Mㅓ든지 Dㅏ하는 게 MD라구요?  | <br> 브랜드 수주회로 시작해, 디제잉으로 마무리 <br>🎧하는 바잉MD의 반전! 일상로그
+                  >
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img-box">
+                  <img
+                    src="	https://img.youtube.com/vi/RQJ-zlC5f-g/sddefault.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="content">
+                  <span class="desc"
+                    >vlog 디자이너의 자취 br방?!💕 | 찐 꿀템 가 <br>득, 새집 홈투어🏡 </span
+                  >
+                </div>
+              </a>
+            </li>
+            <li>
+              <a href="">
+                <div class="img-box">
+                  <img
+                    src="	https://img.youtube.com/vi/g0ZUkbP7-QQ/sddefault.jpg"
+                    alt=""
+                  />
+                </div>
+                <div class="content">
+                  <span class="desc"
+                    >발레코어..이거를 어디 입고 가냐구요?...우 <br> 리는 찐 무용을 해봅니다 👯‍♀ | 잊지마...우리 <br> 가 두고 온 토슈즈...🥿</span
+                  >
+                </div>
+              </a>
+            </li>
+          </ul>
+
+          <a href="" class="link-more"
+            >세사패TV 바로가기
+            <svg
+              width="12"
+              height="13"
+              viewBox="0 0 12 13"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M3.54293 2.39645C3.73819 2.20118 4.05478 2.20118 4.25004 2.39645L8.60359 6.75L4.25004 11.1036C4.05478 11.2988 3.73819 11.2988 3.54293 11.1036C3.34767 10.9083 3.34767 10.5917 3.54293 10.3964L7.18938 6.75L3.54293 3.10355C3.34767 2.90829 3.34767 2.59171 3.54293 2.39645Z"
+                fill="#111111"
+              />
+            </svg>
+          </a>
+        </ul>
+      </section>
+
+      <section class="sc-news">
+        <ul class="list">
+          <li>
+            <a href="">
+              <div class="img-box">
+                <div class="bg"></div>
+                <div class="logo">
+                  <img
+                    src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22439_252201_5_KOR_OV_20230405173702.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="content">
+                <span class="desc">
+                  예술, 패션 그리고 <br />
+                  디자인까지
+                </span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <div class="bg2"></div>
+                <div class="logo">
+                  <img
+                    src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22439_252201_6_KOR_OV_20230405173827.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="content">
+                <span class="desc">
+                  Culture Blending <br />
+                  Union
+                </span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <div class="bg3"></div>
+                <div class="logo">
+                  <img
+                    src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22439_252201_7_KOR_OV_20230405173944.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="content">
+                <span class="desc">
+                  취향을 발견하는 <br />
+                  패션 편집숍
+                </span>
+              </div>
+            </a>
+          </li>
+          <li>
+            <a href="">
+              <div class="img-box">
+                <div class="bg4"></div>
+                <div class="logo">
+                  <img
+                    src="https://img.ssfshop.com/display/category/THM/A30/A16/contents/22439_252201_9_KOR_OV_20230516112315.png"
+                    alt=""
+                  />
+                </div>
+              </div>
+              <div class="content">
+                <span class="desc">
+                  언제나 소년들처럼
+                </span>
+              </div>
+            </a>
+          </li>
+        </ul>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="link-more">
+        <a href="">매장찾기</a>
+        <a href="">고객센터</a>
+        <a href="">멤버십안내</a>
+      </div>
+      <address class="address-area">
+        <strong class="company">삼성물산 (주) 패션부문</strong>
+        주소: 서울특별시 강남구 남부순환로 2806 (도곡동)
+        <br />
+        대표: 고정석 외 2명
+        <span class="line"></span>
+        사업자 등록번호 : 101-85-43600
+        <a href="">사업자 정보확인</a>
+        <br />
+        통신판매업 신고번호: 제 2015-서울강남-02894 대표 고정석 외 2명
+        <br />
+
+        호스팅서비스: 삼성물산 (주) 패션부문
+        <br />
+
+        대표전화 및 쇼핑몰 상품 문의: (전국)
+        <a href="">1599-0007</a>
+        (수신자부담)
+        <a href="">080-700-1472</a>
+      </address>
+      <div class="use">
+        <a href=""><strong>개인정보처리방침</strong></a>
+        <a href="" class="terms">이용약관</a>
+      </div>
+      <div class="copy">COPYRIGHTⓒ2022 SSF SHOP ALL RIGHTS RESERVED</div>
+      <div class="sns-area">
+        <a href="" class="youtube"></a>
+        <a href="" class="insta"></a>
+      </div>
+      <div class="gruop-bottom">
+        <a href="">
+          <span>인증범위 : 패션부문 온라인 쇼핑몰 서비스 운영</span>
+          <span>유효기간 : 2022.08.12 ~ 2025.08.11</span>
+        </a>
+      </div>
+    </footer>
+  </body>
+</html>
